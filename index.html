@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>R Family</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="nav-brand">
+        <img src="images/logo.png" class="logo-circle">
+        <span class="brand-name">R Family</span>
+    </div>
+
+    <ul class="nav-menu">
+        <li><a href="#home" onclick="closeMenu()">Home</a></li>
+        <li><a href="#menu" onclick="closeMenu()">Menu</a></li>
+        <li><a href="#order" onclick="closeMenu()">Order</a></li>
+    </ul>
+
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+
+<header id="home" class="hero">
+    <h1 class="animate-text">Lagi Lapar? Kami Siap Masak! 🍳🔥</h1>
+    <p class="animate-text delay">
+        Masakan rumahan fresh 🍽️, porsi puas 😋, harga bersahabat 💸. Tinggal pesan, kami urus 🚚
+    </p>
+</header>
+
+
+
+<!-- MENU -->
+<section class="menu" id="menu">
+    <h2>Menu Kami</h2>
+
+    <div class="menu-list">
+        <div class="menu-item">
+            <img src="images/nasgor.png">
+            <h3>Nasi Goreng Spesial</h3>
+            <p>Rp15.000</p>
+            <button onclick="tambahPesanan('Nasi Goreng Spesial',15000)">Tambah</button>
+        </div>
+
+        <div class="menu-item">
+            <img src="images/mie.png">
+            <h3>Mie Goreng Homemade</h3>
+            <p>Rp12.000</p>
+            <button onclick="tambahPesanan('Mie Goreng Homemade',12000)">Tambah</button>
+        </div>
+
+        <div class="menu-item">
+            <img src="images/ayam.png">
+            <h3>Ayam Geprek</h3>
+            <p>Rp18.000</p>
+            <button onclick="tambahPesanan('Ayam Geprek',18000)">Tambah</button>
+        </div>
+    </div>
+</section>
+
+<!-- ORDER -->
+<section class="order" id="order">
+    <h2>Pesanan Anda</h2>
+
+    <ul id="listPesanan"></ul>
+
+    <h3>Total: Rp <span id="total">0</span></h3>
+
+    <input type="text" id="nama" placeholder="Nama Anda">
+    <textarea id="alamat" placeholder="Alamat"></textarea>
+
+    <button class="btn" onclick="kirimWA()">Pesan via WhatsApp</button>
+</section>
+
+<footer>
+    <p>📞 0812-4516-2041</p>
+    <p>📍 Usaha Rumahan</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

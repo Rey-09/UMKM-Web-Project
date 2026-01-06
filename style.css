@@ -1,0 +1,308 @@
+/* =======================
+   ROOT & DARK MODE
+======================= */
+:root {
+    --main: #ff9800;
+    --bg: #ffffff;
+    --text: #333;
+}
+
+.dark {
+    --bg: #121212;
+    --text: #f4f4f4;
+}
+
+/* =======================
+   RESET & GLOBAL
+======================= */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* =======================
+   HEADER
+======================= */
+header {
+    background: #ff9800;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* =======================
+   NAVBAR
+======================= */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(135deg, #ff9800, #ffb74d);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+/* BRAND */
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* LOGO */
+.logo-circle {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: contain;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.logo-circle:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+/* BRAND NAME */
+.brand-name {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
+}
+
+/* NAV MENU */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-menu a:hover {
+    text-decoration: underline;
+}
+
+/* =======================
+   SECTION
+======================= */
+.section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* =======================
+   MENU LIST
+======================= */
+.menu {
+    padding: 20px;
+}
+
+.menu-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 15px;
+}
+
+.menu-item {
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.menu-item button {
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* =======================
+   MENU GRID (CARD)
+======================= */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 15px;
+}
+
+.menu-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* =======================
+   ORDER FORM
+======================= */
+.order {
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+/* =======================
+   BUTTONS
+======================= */
+.btn {
+    background: #25D366;
+    color: white;
+    padding: 12px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn-wa {
+    background: #25D366;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* =======================
+   FOOTER
+======================= */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* =======================
+   ANIMATION
+======================= */
+@keyframes pop {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+}
+
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: linear-gradient(135deg, #ff9800, #ffb74d);
+        flex-direction: column;
+        width: 200px;
+        padding: 15px;
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+
+    .nav-menu {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: linear-gradient(135deg, #ff9800, #ffb74d);
+        flex-direction: column;
+        width: 200px;
+        padding: 15px;
+        display: none;
+        border-radius: 0 0 0 10px;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+#listPesanan button {
+    background: #e53935;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #ff9800, #ffb74d);
+    color: white;
+    overflow: hidden;
+}
+
+/* ANIMATION */
+.animate-text {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease forwards;
+}
+
+.animate-text.delay {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
